@@ -57,5 +57,15 @@
     "sass": "^1.99.0",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "sharp",
+      "bcrypt",
+      "esbuild",
+      "@prisma/engines@7.8.0",
+      "prisma@7.8.0"
+    ]
   }
+  
 }
