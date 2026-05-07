@@ -1,11 +1,10 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import prisma from "@/lib/prisma";
+import { listPosts } from "@/lib/data";
 
 export default async function PostsPage() {
-  const posts = await prisma.post.findMany({
-    orderBy: { createdAt: "desc" },
-  });
+
+  const posts = await listPosts();
 
   return (
     <div className="w-full md:w-3/5 mx-auto p-8">
